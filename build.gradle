@@ -4,6 +4,7 @@ buildscript {
 
 plugins {
     id 'java'
+    id 'application'
     id 'com.diffplug.spotless' version "${spotlessVersion}"
     id 'com.github.ben-manes.versions' version "${benmanesVersion}"
     id 'com.github.spotbugs' version "${spotbugsVersion}"
@@ -11,6 +12,7 @@ plugins {
 
 group = 'org.example'
 version = '1.0'
+mainClassName = System.getProperty('main_class') ?: 'Main'
 
 repositories {
     mavenCentral()
@@ -41,4 +43,8 @@ jar {
         configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
     }
     exclude('META-INF/*.RSA', 'META-INF/*.SF', 'META-INF/*.DSA')
+}
+
+run {
+    standardInput = System.in
 }
