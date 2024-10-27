@@ -12,15 +12,18 @@ plugins {
 
 group = 'org.example'
 version = '1.0'
-mainClassName = System.getProperty('main_class') ?: 'Main'
+
+application {
+    mainClass.set(System.getProperty('main_class') ?: 'Main')
+}
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    implementation supportedDependencies.lang3
-    implementation 'org.json:json:20240303'
+    implementation depsArray.lang3
+    implementation depsArray.json
 }
 
 tasks.withType(JavaCompile) {
