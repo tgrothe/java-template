@@ -32,7 +32,7 @@ repository:
   has_downloads: true
 
   # Updates the default branch for this repository.
-  #default_branch: main
+  default_branch: main
 
   # Either `true` to allow squash-merging pull requests, or `false` to prevent
   # squash-merging.
@@ -130,7 +130,7 @@ branches:
         # Required. Require branches to be up to date before merging.
         strict: true
         # Required. The list of status checks to require in order to merge into this branch
-        contexts: ["Build with Gradle Wrapper"]
+        contexts: [build]
       # Required. Enforce all configured restrictions for administrators. Set to true to enforce required status checks for repository administrators. Set to null to disable.
       enforce_admins: true
       # Prevent merge commits from being pushed to matching branches
