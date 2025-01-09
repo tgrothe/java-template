@@ -68,7 +68,7 @@ labels:
     color: 00CC00
     description: New functionality ⌶.
 
-  - name: help wanted
+  - name: Help wanted and newbie friendly
     color: 0000CC
     description: Extra attention ⚠ is needed.
 
