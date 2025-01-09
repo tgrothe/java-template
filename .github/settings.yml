@@ -61,16 +61,16 @@ repository:
 labels:
   - name: bug
     color: CC0000
-    description: An issue with the system 🐛.
+    description: An issue 🐛 with the system.
 
   - name: feature
     # If including a `#`, make sure to wrap it with quotes!
-    color: '#336699'
-    description: New functionality.
+    color: 00CC00
+    description: New functionality ⌶.
 
-  - name: Help Wanted
-    # Provide a new name to rename an existing label
-    new_name: first-timers-only
+  - name: help wanted
+    color: 0000CC
+    description: Extra attention ⚠ is needed.
 
 # Milestones: define milestones for Issues and Pull Requests
 #milestones:
