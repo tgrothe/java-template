@@ -123,7 +123,7 @@ branches:
         require_code_owner_reviews: true
         # Specify which users and teams can dismiss pull request reviews. Pass an empty dismissal_restrictions object to disable. User and team dismissal_restrictions are only available for organization-owned repositories. Omit this parameter for personal repositories.
         dismissal_restrictions:
-          users: [tgrothe, dependabot]
+          users: [tgrothe]
           teams: []
       # Required. Require status checks to pass before merging. Set to null to disable
       required_status_checks:
@@ -136,7 +136,7 @@ branches:
       # Prevent merge commits from being pushed to matching branches
       required_linear_history: true
       # Required. Restrict who can push to this branch. Team and user restrictions are only available for organization-owned repositories. Set to null to disable.
-      restrictions: null
-        #apps: []
-        #users: [tgrothe, dependabot]
-        #teams: []
+      restrictions:
+        apps: []
+        users: []
+        teams: []
