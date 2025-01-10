@@ -5,6 +5,7 @@ on:
       - main
 jobs:
   Enable-Automerge:
+    permissions: write-all
     runs-on: ubuntu-latest
     if: ${{ (github.actor == 'dependabot[bot]') || (github.actor == 'tgrothe') }}
     steps:
