@@ -13,6 +13,7 @@ To use this template, click the "Use this template" button on the repository pag
 git checkout -b update-from-template
 # cherry-pick...
 git fetch https://github.com/tgrothe/java-template.git main && git cherry-pick FETCH_HEAD
+# resolve possible conflicts, continue, commit...
 # see changes to push before push
 git diff origin/main
 # push...
@@ -22,4 +23,4 @@ git push
 # git fetch https://github.com/tgrothe/java-template.git main && git diff FETCH_HEAD
 ```
 
-_By the way: A "pull ... --allow-unrelated-histories" would also be possible, but this affects the history, and causing chaos. :S_
+_By the way: A `pull ... --allow-unrelated-histories` would also be possible, but this affects the history, and causing chaos._ :cold_sweat:
