@@ -5,8 +5,11 @@ public class Main {
   public static final Logger logger = LogManager.getLogger();
 
   public static void main(String[] args) {
-    Runtime.getRuntime()
-        .addShutdownHook(new Thread(() -> logger.debug("Application is shutting down")));
-    logger.debug("Application started");
+    logger.debug("Hello");
+    logger.debug(add(2, 3));
+  }
+
+  public static int add(int a, int b) {
+    return a + b;
   }
 }
