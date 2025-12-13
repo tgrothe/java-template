@@ -1,8 +1,10 @@
 name: Enable Automerge
+
 on:
   pull_request:
     branches:
       - main
+
 jobs:
   Enable-Automerge:
     permissions: write-all
