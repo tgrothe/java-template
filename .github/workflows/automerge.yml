@@ -2,8 +2,8 @@ name: Enable Automerge
 
 on:
   pull_request:
-    branches:
-      - main
+    branches: [main]
+    types: [opened, ready_for_review]
 
 jobs:
   Enable-Automerge:
