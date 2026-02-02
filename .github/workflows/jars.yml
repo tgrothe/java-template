@@ -21,7 +21,9 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
       - name: Build with Gradle Wrapper
-        run: ./gradlew jar
+        run: |
+          chmod +x ./gradlew
+          ./gradlew jar
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@v2
         with:
