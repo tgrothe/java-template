@@ -9,7 +9,7 @@ plugins {
 }
 
 application {
-    mainClass.set(System.getProperty('main_class') ?: 'Main')
+    mainClass.set(System.getProperty('main_class') ?: 'TempMain')
 }
 
 repositories {
@@ -17,18 +17,20 @@ repositories {
 }
 
 dependencies {
-    testImplementation(platform('org.junit:junit-bom:6.1.0-M1'))
-    testImplementation('org.junit.jupiter:junit-jupiter')
-    testRuntimeOnly('org.junit.platform:junit-platform-launcher')
+//    testImplementation(platform('org.junit:junit-bom:6.1.0-M1'))
+//    testImplementation('org.junit.jupiter:junit-jupiter')
+//    testRuntimeOnly('org.junit.platform:junit-platform-launcher')
 
     implementation 'org.apache.logging.log4j:log4j-core:3.0.0-beta3'
+    implementation 'org.apache.logging.log4j:log4j-config-properties:3.0.0-beta3'
+
     implementation 'org.apache.commons:commons-lang3:3.20.0'
     implementation 'org.json:json:20251224'
 }
 
-test {
-    useJUnitPlatform()
-}
+//test {
+//    useJUnitPlatform()
+//}
 
 java {
     sourceCompatibility = JavaVersion.VERSION_17
